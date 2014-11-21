@@ -8,6 +8,13 @@ public class Funcionario {
     private String nome;
     private Cargo cargo;
     private String nascimento;
+    
+    public Funcionario(int codigo, String nome, Cargo cargo, String nascimento) {
+        this.codigo = codigo;
+        this.nome = nome;
+        this.cargo = cargo;
+        this.nascimento = nascimento;
+    }
 
     public int getCodigo() {
         return codigo;

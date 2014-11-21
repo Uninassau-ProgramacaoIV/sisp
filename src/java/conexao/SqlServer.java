@@ -14,6 +14,13 @@ public class SqlServer {
     private String database;
     
     public Connection c;
+    
+    public SqlServer() {
+        this.host = "localhost";
+        this.user = "sa";
+        this.pass = "12345";
+        this.database = "psf";
+    }
 
     public SqlServer ( String host, String database, String user, String pass ) {
         this.pass = pass;
