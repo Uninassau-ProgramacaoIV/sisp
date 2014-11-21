@@ -34,19 +34,18 @@ public class testeConexao extends HttpServlet {
         response.setContentType("text/html;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) {
             /* TODO output your page here. You may use following sample code. */
-            SqlServer con = new SqlServer("NOTEBOOKPC\\SQLEXPRESS2008", "psf", "sa", "123456");
-            if (con.connect()) {
-                out.println("Conectou");
-            } else {
-                out.println("Não conectou");
-            }
             out.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<head>");
             out.println("<title>Servlet testeConexao</title>");            
             out.println("</head>");
             out.println("<body>");
-            out.println("<h1>Servlet testeConexao at " + request.getContextPath() + "</h1>");
+            SqlServer con = new SqlServer("localhost", "psf", "sa", "123456");
+            if (con.connect()) {
+                out.println("Conectou");
+            } else {
+                out.println("Não conectou");
+            }
             out.println("</body>");
             out.println("</html>");
         }
