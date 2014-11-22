@@ -28,4 +28,9 @@ public List<Funcionario> listar() throws Exception
     {
         return dao.listar();
     }
+
+public void excluir(int codigo) throws Exception {
+    // Excluir
+    dao.excluir(codigo);
+}
 }

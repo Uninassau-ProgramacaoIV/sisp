@@ -8,6 +8,10 @@
         <servlet-name>testeConexao</servlet-name>
         <servlet-class>conexao.testeConexao</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>funcionarioExcluirServlet</servlet-name>
+        <servlet-class>mvc.funcionario.view.funcionarioExcluirServlet</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>funcionarioListarServlet</servlet-name>
         <url-pattern>/funcionarioListarServlet</url-pattern>
@@ -15,6 +19,10 @@
     <servlet-mapping>
         <servlet-name>testeConexao</servlet-name>
         <url-pattern>/testeConexao</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>funcionarioExcluirServlet</servlet-name>
+        <url-pattern>/funcionarioExcluirServlet</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
