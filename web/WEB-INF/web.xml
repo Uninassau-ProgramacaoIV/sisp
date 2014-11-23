@@ -16,6 +16,10 @@
         <servlet-name>funcionarioEditarServlet</servlet-name>
         <servlet-class>mvc.funcionario.view.funcionarioEditarServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>funcionarioInserirServlet</servlet-name>
+        <servlet-class>mvc.funcionario.view.funcionarioInserirServlet</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>funcionarioListarServlet</servlet-name>
         <url-pattern>/funcionarioListarServlet</url-pattern>
@@ -31,6 +35,10 @@
     <servlet-mapping>
         <servlet-name>funcionarioEditarServlet</servlet-name>
         <url-pattern>/funcionarioEditarServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>funcionarioInserirServlet</servlet-name>
+        <url-pattern>/funcionarioInserirServlet</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

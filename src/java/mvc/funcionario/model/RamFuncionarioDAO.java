@@ -18,7 +18,14 @@ public class RamFuncionarioDAO implements FuncionarioDAO {
 
     @Override
     public void inserir(Funcionario funcionario) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        con = new SqlServer("localhost", "psf", "sa", "123456");
+        try {
+            con.connect();
+            con.inserir("insert into tb_funcionario (fun_nome, fun_nascimento, fun_cargo) values ('"+funcionario.getNome()+"', '"+funcionario.getNascimento()+"', "+ funcionario.getCargo().getCodigo()+ ")");
+        } finally {
+            con.disconnect();
+        }
+        //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     @Override

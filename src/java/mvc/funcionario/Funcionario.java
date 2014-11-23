@@ -13,6 +13,12 @@ public class Funcionario {
         
     }
     
+    public Funcionario(String nome, Cargo cargo, String nascimento) {
+        this.nome = nome;
+        this.cargo = cargo;
+        this.nascimento = nascimento;
+    }
+    
     public Funcionario(int codigo, String nome, Cargo cargo, String nascimento) {
         this.codigo = codigo;
         this.nome = nome;

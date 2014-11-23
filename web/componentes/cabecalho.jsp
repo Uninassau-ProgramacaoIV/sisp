@@ -1,4 +1,4 @@
-<div class="bs-example">
+<div style="margin-bottom: 20px">
     <ul class="nav nav-pills">
       <li role="presentation" class="active"><a href="#">Início</a></li>
       <li role="presentation" class="dropdown">
@@ -7,7 +7,7 @@
         </a>
         <ul class="dropdown-menu" role="menu">
           <li><a href="./funcionarioListarServlet">Listar</a></li>
-          <li><a href="#">Inserir</a></li>
+          <li><a href="./funcionarioInserirServlet">Inserir</a></li>
         </ul>
       </li>
       <li role="presentation" class="dropdown">

@@ -37,4 +37,8 @@ public class FuncionarioController {
     public void editar(Funcionario funcionario) {
         dao.alterar(funcionario);
     }
+    
+    public void inserir(Funcionario funcionario) {
+        dao.inserir(funcionario);
+    }
 }
