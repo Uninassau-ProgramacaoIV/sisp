@@ -6,7 +6,7 @@
           Funcionário<span class="caret"></span>
         </a>
         <ul class="dropdown-menu" role="menu">
-          <li><a href="#">Listar</a></li>
+          <li><a href="./funcionarioListarServlet">Listar</a></li>
           <li><a href="#">Inserir</a></li>
         </ul>
       </li>

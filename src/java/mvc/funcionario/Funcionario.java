@@ -9,6 +9,10 @@ public class Funcionario {
     private Cargo cargo;
     private String nascimento;
     
+    public Funcionario() {
+        
+    }
+    
     public Funcionario(int codigo, String nome, Cargo cargo, String nascimento) {
         this.codigo = codigo;
         this.nome = nome;

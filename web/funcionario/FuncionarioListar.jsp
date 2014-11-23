@@ -34,7 +34,7 @@
 
                 <c:forEach items="${lista}" var="funcionario">
                     <tr>
-                        <td><a href="#"><img src="imagens/alterar.png" alt="Alterar" title="Alterar"></a></td>
+                        <td><a href="funcionarioEditarServlet?c=${funcionario.codigo}"><img src="imagens/alterar.png" alt="Alterar" title="Alterar"></a></td>
                         <td><a href="#" onclick="ConfirmaExclusao(${funcionario.codigo})"><img src="imagens/excluir.png" alt="Excluir" title="Excluir"></a></td>
                         <td>${funcionario.codigo}</td>
                         <td>${funcionario.nome}</td>
