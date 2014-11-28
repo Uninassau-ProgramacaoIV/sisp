@@ -12,20 +12,36 @@ import mvc.cargo.CargoController;
 import mvc.cargo.model.RamCargoDAO;
 import mvc.funcionario.Funcionario;
 
-public class RamFuncionarioDAO implements FuncionarioDAO {
-
+public class RamFuncionarioDAO implements FuncionarioDAO 
+{
     private SqlServer con;
 
     @Override
-    public void inserir(Funcionario funcionario) {
+    public void inserir(Funcionario funcionario) 
+    {
+        // Não fique criando e fechando a conexão, use DataSource.
         con = new SqlServer("localhost", "psf", "sa", "123456");
-        try {
+        
+        try 
+        {
             con.connect();
+            
+            // Use Prepared Stamenet em vez do Statement, isso preveni SQL Injection.
+            // O código deve ser mais ou menos assim:
+            
+            // String SQL = "insert into tb_funcionario (fun_nome, fun_nascimento, fun_cargo) values (?,?,?);";
+            // PreparedStatement pstm = con.preparedStatement( SQL );
+            // pstm.setString( 1 , funcionario.getNome() );
+            // pstm.setString( 2 , funcionario.getNascimento() );
+            // pstm.setInt   ( 3 , funcionario.getCargo().getCodigo() );
+            // pstm.execute();
+            
             con.inserir("insert into tb_funcionario (fun_nome, fun_nascimento, fun_cargo) values ('"+funcionario.getNome()+"', '"+funcionario.getNascimento()+"', "+ funcionario.getCargo().getCodigo()+ ")");
-        } finally {
+        } 
+        finally
+        {
             con.disconnect();
         }
-        //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     @Override
